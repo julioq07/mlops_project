@@ -1,4 +1,3 @@
-
 import os
 import pandas as pd
 
@@ -16,10 +15,7 @@ class ExampleGen:
 class LocalCollection(ExampleGen):
     """
     """
-    DIR_PATH = os.getcwd()
-    DATA_PATH = "../data"
-
-    os.chdir(DATA_PATH)
+    DATA_PATH = "./src/data"
     
     def __init__(self, dataset_name):
         super().__init__(dataset_name)
@@ -29,6 +25,9 @@ class LocalCollection(ExampleGen):
         file_path = f'{self.file_name}.csv'
         df = pd.read_csv(file_path)
         return df
+    
+    def load_other_types(self):
+        pass
 
 
 class CloudCollection(ExampleGen):

@@ -9,4 +9,5 @@
 **/__pycache__
 
 # CSV files
-*.csv
+**/modelA.csv
+**/modelB.csv
