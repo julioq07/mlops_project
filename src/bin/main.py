@@ -1,5 +1,8 @@
+from log.log import Logger
+
 def main():
-    print("=== main ===")
+    print("=== Running ===")
+    Logger()
 
 
 if __name__=="__main__":
