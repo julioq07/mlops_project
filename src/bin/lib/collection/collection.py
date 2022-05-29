@@ -1,8 +1,7 @@
-import os
 import pandas as pd
 
 
-class ExampleGen:
+class Collector:
     """
     """
 
@@ -12,7 +11,7 @@ class ExampleGen:
         self.dataset_name = dataset_name
 
 
-class LocalCollection(ExampleGen):
+class LocalCollector(Collector):
     """
     """
     DATA_PATH = "./src/data"
@@ -30,7 +29,7 @@ class LocalCollection(ExampleGen):
         pass
 
 
-class CloudCollection(ExampleGen):
+class CloudCollector(Collector):
     """
     """
     CLOUD_PATH = ''
