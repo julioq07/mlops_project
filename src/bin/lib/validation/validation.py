@@ -1,7 +1,4 @@
-import collections
-
-
-class ValidationGen:
+class Validation:
     """
     """
     def __init__(self, collectionDF):
@@ -12,22 +9,7 @@ class ValidationGen:
         self.collectionDF = collectionDF
 
 
-class StatisticGen(ValidationGen):
-    """
-    """
-    def __init__(self, collectionDF):
-        super().__init__(collectionDF)
-
-    def get_describe(self):
-        """
-        """
-        return self.collectionDF.describe()
-
-    def get_otherStats(self):
-        pass
-
-
-class SchemaGen(ValidationGen):
+class Schema(Validation):
     """
     """
     def __init__(self, collectionDF):

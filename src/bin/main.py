@@ -3,7 +3,9 @@ from log.log import Logger
 from lib.collection.collection import LocalCollection
 from conf.modelA import modelA 
 
-from lib.validation.validation import StatisticGen, SchemaGen
+from lib.validation.validation import Schema
+
+from lib.preprocessing.preprocessing import Statistic, Transform
 
 
 DATASET_NAME = modelA["collection.name"]
@@ -24,13 +26,19 @@ def main():
     # Data Validation Component
     print("=== Validation Started ===")
     print("=== --- Stats --- ===")    
-    statObj = StatisticGen(df)
+    statObj = Statistic(df)
     statObj.get_describe()
-
-    print("=== --- Schema --- ===")
-    schObj = SchemaGen(df)
-    schObj.get_schema()
     print("=== Validation Ended ===")
+
+    # Data Preprocessing Component
+    print("=== Preprocessing Started ===")
+    print("=== --- Schema --- ===")
+    schObj = Schema(df)
+    schObj.get_schema()
+    print("=== --- Transform --- ===")
+    tranObj = Transform(df)
+    tranObj.get_transform()
+    print("=== Preprocessing Ended ===")
 
     print("=== ML Workflow Ended ===")
 
