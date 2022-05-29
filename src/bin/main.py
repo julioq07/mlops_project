@@ -1,11 +1,11 @@
 from log.log import Logger
 
-from lib.collection.collection import LocalCollection
+from lib.collection.collection import LocalCollector
 from conf.modelA import modelA 
 
 from lib.validation.validation import Schema
 
-from lib.preprocessing.preprocessing import Statistic, Transform
+from lib.preprocessing.preprocessing import Statistic, Transformer
 
 
 DATASET_NAME = modelA["collection.name"]
@@ -19,26 +19,30 @@ def main():
 
     # Data Collection Component
     print("=== Collection Started ===")
-    colObj = LocalCollection(DATASET_NAME)
-    df = colObj.load_csv()
+    colObjA = LocalCollector(DATASET_NAME)
+    dfA = colObjA.load_csv()
     print("=== Collection Ended ===")
 
     # Data Validation Component
     print("=== Validation Started ===")
     print("=== --- Schema --- ===")
-    schObj = Schema(df)
-    schObj.get_schema()
+    schObjA = Schema(dfA)
+    schObjA.get_schema()
     print("=== Validation Ended ===")
 
     # Data Preprocessing Component
     print("=== Preprocessing Started ===")
     print("=== --- Stats --- ===")    
-    statObj = Statistic(df)
-    statObj.get_describe()
+    statObjA = Statistic(dfA)
+    statObjA.get_describe()
     print("=== --- Transform --- ===")
-    tranObj = Transform(df)
-    tranObj.identity()
+    tranObjA = Transformer(dfA)
+    dfTransA = tranObjA.identity()
     print("=== Preprocessing Ended ===")
+
+    # Data Training Component
+    print("=== Training Started")
+    print("=== Training Ended")
 
     print("=== ML Workflow Ended ===")
 

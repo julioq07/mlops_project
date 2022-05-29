@@ -1,4 +1,4 @@
-class Validation:
+class Validator:
     """
     """
     def __init__(self, collectionDF):
@@ -9,7 +9,7 @@ class Validation:
         self.collectionDF = collectionDF
 
 
-class Schema(Validation):
+class Schema(Validator):
     """
     """
     def __init__(self, collectionDF):

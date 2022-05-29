@@ -1,4 +1,4 @@
-class Preprocessing:
+class Preprocessor:
     """
     """
     def __init__(self, collectionDF):
@@ -9,7 +9,7 @@ class Preprocessing:
         self.collectionDF = collectionDF
 
 
-class Statistic(Preprocessing):
+class Statistic(Preprocessor):
     """
     """
     def __init__(self, collectionDF):
@@ -24,7 +24,7 @@ class Statistic(Preprocessing):
         pass
 
 
-class Transform(Preprocessing):
+class Transformer(Preprocessor):
     """
     """
     def __init__(self, collectionDF):
