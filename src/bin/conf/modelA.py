@@ -1,0 +1,3 @@
+modelA = {
+    "collection.name": "iris"
+}

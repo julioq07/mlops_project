@@ -1,6 +1,39 @@
 # Welcome to my first MLOps project
 
 ***
-## Run
-locate your root in the following path: ~/src/bin/opt/ and execute the 
-shell script as follows: $ sh exe_python.sh
+## Setup
+
+Make sure your are located in the project root path:
+
+    $ pwd
+    ~/mlops_project
+
+
+Then setup the conda environment:
+
+    $ conda remove --name mlops --all
+    $ conda env create -f env.yml
+    $ conda activate mlops
+
+
+Execute the shell script:
+
+    $ sh ./src/opt/exe.sh
+
+
+***
+## References
+
+1. Ref1
+
+2. Ref2
+
+
+***
+## Contact
+
+Please share your thought sending me an email to:
+
+    jquinones0709@gmail.com
+
+Author: Julio Quiñones
