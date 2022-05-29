@@ -30,8 +30,11 @@ class Transform(Preprocessing):
     def __init__(self, collectionDF):
         super().__init__(collectionDF)
 
-    def get_transform(self):
+    def identity(self):
         """
         """
-        # return self.collectionDF
-        print("TRANFORM IN CONSTRUCTION")
+        df = self.collectionDF
+        return df
+    
+    def get_otherTrans(self):
+        pass

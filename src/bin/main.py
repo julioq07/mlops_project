@@ -25,19 +25,19 @@ def main():
 
     # Data Validation Component
     print("=== Validation Started ===")
-    print("=== --- Stats --- ===")    
-    statObj = Statistic(df)
-    statObj.get_describe()
+    print("=== --- Schema --- ===")
+    schObj = Schema(df)
+    schObj.get_schema()
     print("=== Validation Ended ===")
 
     # Data Preprocessing Component
     print("=== Preprocessing Started ===")
-    print("=== --- Schema --- ===")
-    schObj = Schema(df)
-    schObj.get_schema()
+    print("=== --- Stats --- ===")    
+    statObj = Statistic(df)
+    statObj.get_describe()
     print("=== --- Transform --- ===")
     tranObj = Transform(df)
-    tranObj.get_transform()
+    tranObj.identity()
     print("=== Preprocessing Ended ===")
 
     print("=== ML Workflow Ended ===")
