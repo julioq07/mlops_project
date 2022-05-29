@@ -7,3 +7,6 @@
 
 # Python files
 **/__pycache__
+
+# CSV files
+*.csv
