@@ -1,3 +1,4 @@
 modelA = {
-    "collection.name": "iris"
+    "collection.name": "iris",
+    "validation": ''
 }
