@@ -1,2 +1,12 @@
 # VSCode conf
-mlops_project.code-workspace
+**/mlops_project.code-workspace
+
+# MLFlow files
+**/mlruns
+**/log.txt
+
+# Python files
+**/__pycache__
+
+# CSV files
+*.csv
