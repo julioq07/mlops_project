@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/asus-julius/Projects/Sources/mlops_project'
+make: Leaving directory '/home/asus-julius/Projects/Sources/mlops_project'
+ 
+make: *** No targets.  Stop.
+

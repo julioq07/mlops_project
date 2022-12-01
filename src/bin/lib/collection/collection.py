@@ -26,6 +26,7 @@ class LocalCollector(Collector):
         return df
     
     def load_other_types(self):
+        # TODO document why this method is empty
         pass
 
 
