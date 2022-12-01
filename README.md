@@ -4,15 +4,17 @@
 ***
 ## Summary
 
-This project is a first approach for create a ML Workflow[2] in order to
+This project is a first approach to create a ML Workflow[2] in order to
 apply basic concepts of MLOps paradigm to solve real production problems[4].
 
 To reach my purpose, I developed an entire Framework (that I called RohanML), that
 could be scaled without any problem for more than a couple models.
 
 The next step could be use K8 in order to managing the executions of the models
-tested but considering each MLPipeline component as an image and finally connected 
-with an API Rest in order to offer to the client an MLaaS.
+tested but considering each MLPipeline component as an independently image. Finally, 
+these images could be connected with an API Rest and deliver to the user a dashboard
+for monitoring the Machine Learning Pipeline created and presented with the MLaaS 
+paradigm.
 
 
 ***
